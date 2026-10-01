@@ -1,0 +1,21 @@
+---
+title: Setup
+format: html
+execute:
+  echo: false
+---
+
+```{python}
+import os, certifi, sys
+# If you have a corporate CA, set it here (edit the path or delete the line):
+os.environ.setdefault("REQUESTS_CA_BUNDLE", r"C:\ProgramData\Python3\Lib\site-packages\certifi\cacert.pem")
+
+
+# If you access intranet hosts directly, bypass proxy for them:
+#os.environ.setdefault("NO_PROXY", "localhost,#127.0.0.1,.imf.org,ecnswn12p")
+
+# Optional: quick diagnostics (first run only)
+print("PY:", sys.executable)
+print("CERTIFI:", certifi.where())
+print("HTTPS_PROXY:", os.environ.get("HTTPS_PROXY"))
+print("REQUESTS_CA_BUNDLE:", os.environ.get("REQUESTS_CA_BUNDLE"))

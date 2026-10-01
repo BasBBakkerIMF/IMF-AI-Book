@@ -1,0 +1,56 @@
+project:
+  type: website
+
+website:
+  title: "IMF AI tutorial"
+  description: "Teaches IMF economists AI"
+  navbar:
+    title: "AI for IMF"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: blog/
+        text: Blog
+  sidebar:
+    style: docked
+    contents:
+      - section: "Preparation"
+      - section: "3. Azure OpenAI"
+        contents:
+          - "3-Azure-OpenAI/1-reading-excel-data.qmd"
+      
+format:
+  html:
+    theme: cosmo  # You can use other Bootswatch themes: cosmo, flatly, lumen, etc.
+    css: styles.css
+    toc: true
+    number-sections: false
+    page-layout: article
+
+# Enable Python execution
+
+jupyter: python3   
+
+# Default execution options
+execute:
+  enabled: true          # Run code when rendering
+  echo: true             # Show code in output (set to false to hide)
+  warning: false         # Don't show warnings
+  cache: true           # Set to true for long-running cells
+  freeze: true          # Set to true to freeze results after first run
+  # run all .qmd files in the same Python session
+  context: project
+
+# Site rendering options
+render:
+  output-dir: docs       # Publish-ready output (useful for GitHub Pages)
+
+# Content reloader for live preview (optional)
+serve:
+  watch: true
+
+# Metadata for all pages (optional)
+#metadata:
+#  site-url: https://yourusername.github.io/your-quarto-website

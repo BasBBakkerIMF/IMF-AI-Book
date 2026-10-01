@@ -1,0 +1,12 @@
+---
+title: "About this book"
+format: html
+---
+
+**Welcome to the IMF AI Tutorial!**
+
+This website/book was written by Bas Bakker and Greta Polo, in the IMF's Western Hemisphere Department.
+
+If you have any questions or suggestions or corrections, please contact Bas (bbakker\@imf.org), and Greta (gpolo\@imf.org).
+
+Bas and Greta

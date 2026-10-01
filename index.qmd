@@ -1,0 +1,12 @@
+---
+title: "AI Tutorial for IMF Economists"
+editor: visual
+---
+
+**Welcome to the IMF AI Tutorial!**
+
+
+
+If you have any questions or suggestions or corrections, please contact Bas (bbakker\@imf.org), and Greta (gpolo\@imf.org).
+
+Bas and Greta

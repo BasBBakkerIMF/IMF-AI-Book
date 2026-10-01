@@ -1,0 +1,106 @@
+---
+title: "Reading Excel data"
+format: html
+---
+
+## 1. Introduction
+
+In this tutorial, we'll walk through a simple workflow for reading Excel data from the Haver Forward Rates database, converting it into a pandas time series, and visualizing it with Matplotlib. We'll use Quarto’s support for Python code execution to produce a self-contained analysis document.
+
+## 2. Setup
+
+We’ll import the necessary modules and locate the Excel file using `pyprojroot`.
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+from pathlib import Path
+from pyprojroot import here
+```
+
+## 3. Locate and Validate the Data File
+
+Use `pyprojroot` to find the `Haver_Forward_Rates.xlsx` under the `databases` directory. We’ll check that the file exists, raising an error if it does not.
+
+```{python}
+path = here("databases/Haver_Forward_Rates.xlsx")
+if not path.exists():
+    raise FileNotFoundError(f"{path!s} does not exist.")
+```
+
+## 4. Read the Excel Sheet
+
+The `"Euro"` sheet has its header in row 8, so we skip the first 7 rows. We rely on `openpyxl` to handle modern `.xlsx` files.
+
+```{python}
+euro = pd.read_excel(
+    path,
+    sheet_name="Euro",
+    skiprows=7,
+    engine="openpyxl"
+)
+```
+
+## 5. Parse the Date Column
+
+The raw `Date` values are integers like `19940101`. Convert them to pandas `datetime` objects for time series purposes.
+
+```{python}
+euro["Date"] = pd.to_datetime(
+    euro["Date"].astype(str),
+    format="%Y%m%d",
+    errors="coerce"
+)
+```
+
+## 6. Convert to a Time Series
+
+Set the `Date` column as the index, sort by date, and coerce all other columns to numeric types. This ensures missing or malformed data become `NaN`.
+
+```{python}
+euro_ts = euro.set_index("Date").sort_index()
+euro_ts.index.name = "Date"
+euro_ts = euro_ts.apply(pd.to_numeric, errors="coerce")
+```
+
+## 7. Inspect the Time Series
+
+Use built-in pandas methods to view the tail of the dataset and summary information. This helps verify that the data has been loaded correctly.
+
+```{python}
+print("Tail of time series:")
+print(euro_ts.tail())
+
+print("\nInfo:")
+euro_ts.info()
+```
+
+## 8. Plotting with Matplotlib
+
+Finally, we create a line plot of the EUR/USD exchange rate (`XUS` column). We customize the figure size, grid lines, and remove axis labels for a cleaner look.
+
+```{python}
+fig, ax = plt.subplots(figsize=(10, 4))
+euro_ts["XUS"].plot(
+    ax=ax,
+    title="Euro-Dollar Exchange Rate"
+)
+ax.set_xlabel("")
+ax.set_ylabel("")
+ax.grid(True, axis="y")
+ax.tick_params(labelrotation=0)
+plt.tight_layout()
+plt.show()
+```
+
+## Conclusion
+
+In this Quarto tutorial, we’ve demonstrated how to:
+
+-   Locate and validate an Excel file with `pyprojroot`
+-   Read a specific sheet and header row with `pandas`
+-   Parse compact date formats into `datetime`
+-   Convert a DataFrame into a well-formed time series
+-   Inspect and plot the series using Matplotlib
+
+You can extend this workflow to other sheets or additional visualizations as needed.
