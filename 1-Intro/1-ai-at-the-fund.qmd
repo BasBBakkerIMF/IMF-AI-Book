@@ -1,0 +1,20 @@
+---
+title: "AI at the Fund: An Introduction"
+format: html
+---
+
+## Introduction
+
+**Welcome to the IMF AI Book!**
+
+This book was put together by Bas Bakker and Greta Polo from the IMF’s Western Hemisphere Department.
+
+We're big believers in the potential of AI to improve how we work at the IMF. AI can help us work faster, improve our analysis, and spend less time on repetitive tasks. But with so many tools and rapidly evolving capabilities, it can be difficult to know where to start or how to apply AI effectively to our daily work. That's why we created this book!
+
+**Why use AI?** From economic research and data analysis to coding, drafting, and workflow automation, AI can make many of our everyday tasks easier. It can also help us build new tools and workflows that would previously have required specialized technical skills. Of course, AI isn't perfect, so knowing how to provide context, verify outputs, and use these tools responsibly is essential.
+
+Our goal is to help IMF economists and other staff make the most of AI through practical, easy-to-follow tutorials. Whether you're just getting started or already using advanced AI tools and agents, you'll find hands-on examples and workflows you can apply directly to your IMF work.
+
+AI is evolving quickly, and so will this book. We'll continue adding new tutorials, use cases, and contributions from colleagues across the Fund.
+
+If you have questions, suggestions, or interesting use cases to share, please reach out to Bas at bbakker\@imf.org or Greta at gpolo\@imf.org.
