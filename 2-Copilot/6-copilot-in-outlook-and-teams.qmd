@@ -1,0 +1,76 @@
+---
+title: "Copilot in Outlook and Teams"
+format: html
+---
+
+## Introduction
+
+Most of a working day happens in Outlook and Teams, and this is where Copilot saves the most minutes: it summarizes long e-mail threads, drafts replies, comments on the tone of a draft, and recaps meetings. In this tutorial we do each of these once.
+
+## Summarizing an E-mail Thread
+
+Open a thread with several replies. A *Summary by Copilot* control sits at the top of the thread; selecting it produces a summary with numbered citations that link back to the individual messages.
+
+The citations are the useful part. For a decision or a date, click through to the message rather than trusting the summary. Follow-up questions go in the Copilot pane:
+
+```         
+What was asked of me in this thread, and by when?
+```
+
+## Drafting a Reply
+
+When replying, you will see a small chat icon appear on the left hand side which allows you to *Draft with Copilot*. Here you can describe the reply rather than writing it:
+
+```         
+Reply confirming that we will send the updated fiscal tables by Friday, ask whether they also need the debt projections, and keep it to four sentences. Professional tone.
+```
+
+The draft comes with controls for tone and length, and *Regenerate* for another version. Please make sure you read it once before sending: Copilot sometimes commits you to things that were not in the prompt.
+
+## Coaching by Copilot
+
+For an e-mail you have written yourself, Copilot can comment instead of rewriting. Write a draft, select the Copilot icon and choose *Coaching by Copilot*. It returns suggestions on tone, clarity and how the reader is likely to receive it.
+
+This is the better tool for anything sensitive. The words stay yours; Copilot only tells you how they land.
+
+## Recapping a Teams Meeting
+
+Copilot in a Teams meeting needs the meeting to be transcribed, unless the organizer has enabled Copilot without transcription. During the meeting, *Open Copilot* in the meeting controls gives a running recap:
+
+```         
+Recap the meeting so far.
+```
+
+```         
+What questions have been raised and not yet answered?
+```
+
+After the meeting, the *Recap* tab of the meeting has a Copilot button for the same questions:
+
+```         
+List the action items with an owner and a deadline for each. If no deadline was given, say so.
+```
+
+Attribution is where recaps go wrong: an action item ends up with the person who mentioned it rather than the person who agreed to do it. Confirm owners in the meeting chat.
+
+## Catching Up on Chats and Channels
+
+In a Teams chat or channel, the Copilot button at the top right opens a pane that summarizes what you missed:
+
+```         
+Summarize the last seven days of this chat and list anything addressed to me.
+```
+
+## What to Watch For
+
+-   **Summaries drop nuance.** A thread in which someone politely disagreed can come out as "the team agreed". Use the citations.
+-   **Drafts over-commit.** Check that the reply promises only what you told it to.
+-   **Meetings.** Participants can see when a meeting is transcribed; follow the Fund's rules on recording and on what Copilot may be used for in meetings with outside parties.
+
+You've now used Copilot on the four things that fill a working day: threads, replies, tone and meetings. The next tutorial covers the standalone Copilot Chat app, which can search across all of these at once.
+
+## Learn More
+
+-   [Summarize an email thread with Copilot in Outlook](https://support.microsoft.com/en-us/office/summarize-an-email-thread-with-copilot-in-outlook-a79873f2-396b-46dc-b852-7fe5947ab640)
+-   [Welcome to Copilot in Outlook](https://support.microsoft.com/topic/52e22c92-04f4-48ec-89bf-72c4fb9ce26a), including drafting and coaching.
+-   [Use Copilot in Microsoft Teams meetings](https://support.microsoft.com/en-us/copilot-teams) and [Recap a Teams meeting](https://support.microsoft.com/en-us/teams/meetings-events/recap-a-teams-meeting).
