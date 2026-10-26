@@ -1,0 +1,81 @@
+---
+title: "Microsoft 365 Copilot Chat"
+format: html
+---
+
+## Introduction
+
+The Copilot apps inside Word, Excel and Outlook each see one document. Microsoft 365 Copilot Chat is the one that can see across them: with the *Work* setting on, it searches your own e-mails, files and meetings, and with *Web* on it answers from general knowledge and the live web. It is available as an app in your toolbar as the Microsoft 365 Copilot app, n this tutorial we use both modes, reference files, and try the two agents that come with it, Researcher and Analyst.
+
+## Work or Web
+
+With a Copilot licence, a *Work*/*Web* toggle appears at the top of the chat. *Web* uses the model's general knowledge and the internet and does not look at Fund content. *Work* adds everything you have access to in Microsoft 365. The rule of thumb: public questions in Web, questions about your own documents in Work.
+
+A Web question:
+
+```         
+Explain the difference between the overall balance and the primary balance in two sentences, for a non-economist.
+```
+
+A Work question, assuming you saved the *Ruritania 2025 note* from the Word tutorial in your OneDrive:
+
+```         
+Summarize the document "Ruritania 2025 note" in five bullets and tell me when I last edited it.
+```
+
+Work answers come with references to the documents used. Check them: the file Copilot found may be an older copy than the one you meant.
+
+## Referencing Files
+
+Typing `/` in the prompt opens a picker for files, people and meetings, and the attach button uploads a file (verify). Referencing two files lets Copilot compare them:
+
+```         
+Compare /Ruritania 2025 note with /Ruritania.xlsx and list any numbers that differ between the text and the table.
+```
+
+This is the fastest consistency check between a note and its data table, and it works just as well between two drafts of the same document.
+
+## Turning an Answer into a Page
+
+An answer in the chat can be opened as a Copilot Page, an editable document that can be shared and that stays connected to the chat. Ask for something structured, then select *Edit in Pages*:
+
+```         
+Draft an outline for a two-page briefing on Ruritania's fiscal position, with section headings and the key number for each section, based on /Ruritania 2025 note.
+```
+
+## Notebooks
+
+A Copilot Notebook collects the files, pages and meeting notes for one piece of work so that every prompt in the notebook draws on all of them, without referencing each file again (verify). A mission is the natural unit: the previous staff report, the authorities' documents, the mission notes. Create a notebook, add the Ruritania note and the Ruritania workbook, and ask:
+
+```         
+Across the documents in this notebook, what is said about public debt? Quote each source.
+```
+
+*\[Screenshot C-3: a notebook with two Ruritania files added and the answer with quotes.\]*
+
+<!-- ![A Copilot Notebook](../images/2-Copilot/chat-03-notebook.png){width="90%"} -->
+
+## Researcher and Analyst
+
+Two agents ship with Copilot Chat, both available to all economists at the Fund, and appear in the left pane (verify). *Researcher* runs a multi-step research task across your work content and the web and returns a report with citations; it takes minutes rather than seconds. *Analyst* works on data, writing and running Python on a file you attach.
+
+```         
+Researcher: Prepare a 600-word background note on the effect of VAT rate increases on private consumption in small open economies, with sources. Public sources only.
+```
+
+```         
+Analyst: Using the attached Ruritania.xlsx, compute average real GDP growth before and after 2020 and chart public debt over time.
+```
+
+## What to Watch For
+
+-   **Work mode sees everything you can see.** That includes documents you have access to but should not be quoting onward. Read the references before you forward an answer.
+-   **Citations are the product.** An answer without references is an opinion; ask "which documents did you use?".
+-   **Researcher takes time and still needs checking.** Its sources are real, but its reading of them is a draft.
+
+You've now seen the one Copilot that works across documents: Work and Web, file references, Pages, Notebooks, and the Researcher and Analyst agents. The next section builds on this: an agent of your own, with instructions and knowledge you choose.
+
+## Learn More
+
+-   [Get started with Microsoft 365 Copilot Chat](https://support.microsoft.com/en-us/topic/get-started-with-copilot-for-microsoft-365-5b00a52d-7296-48ee-b938-b95b7209f737)
+-   [Microsoft 365 Copilot help and learning](https://support.microsoft.com/en-us/copilot), including Pages, Notebooks, Researcher and Analyst as they are released.
